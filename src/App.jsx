@@ -9,8 +9,8 @@ function App() {
         {id:'cg3',text:'Help other students in the Course Q&amp;A'},])
 
     const addNewGoalHandler = (newGoal) => {
-          setCourseGoals(courseGoals.concat(newGoal) );
-
+          // setCourseGoals(courseGoals.concat(newGoal) );
+        setCourseGoals(prevCourseGoals => [...prevCourseGoals, newGoal] );
     }
 
   return (
