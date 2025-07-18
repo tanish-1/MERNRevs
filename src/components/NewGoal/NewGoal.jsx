@@ -1,7 +1,7 @@
 import React from 'react';
 import "./NewGoal.css"
 
-const NewGoal = () => {
+const NewGoal = ({onAddGoal}) => {
     const addGoalHandler = (event) => {
         event.preventDefault();
 
@@ -9,7 +9,7 @@ const NewGoal = () => {
             id: Math.random().toString(),
             text:'My new goal'
         }
-        console.log(newGoal);
+       onAddGoal(newGoal);
     }
     return (
       <form className="new-goal" onSubmit={addGoalHandler}>
